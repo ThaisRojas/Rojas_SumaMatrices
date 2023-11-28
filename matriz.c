@@ -19,3 +19,11 @@ void imprimirMatriz(int filas, int columnas, int matriz[filas][columnas]) {
         printf("\n");
     }
 }
+void sumarMatrices(int filas, int columnas, int matrizA[filas][columnas], int matrizB[filas][columnas], int resultado[filas][columnas]) {
+    int i, j;
+    for (i = 0; i < filas; i++) {
+        for (j = 0; j < columnas; j++) {
+            resultado[i][j] = matrizA[i][j] + matrizB[i][j];
+        }
+    }
+}
