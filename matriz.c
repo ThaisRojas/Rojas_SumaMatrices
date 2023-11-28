@@ -27,3 +27,32 @@ void sumarMatrices(int filas, int columnas, int matrizA[filas][columnas], int ma
         }
     }
 }
+
+int main() {
+    int filas, columnas;
+    
+    printf("Ingrese el número de filas para las matrices: ");
+    scanf("%d", &filas);
+    
+    printf("Ingrese el número de columnas para las matrices: ");
+    scanf("%d", &columnas);
+
+    // Semilla para números aleatorios
+    srand(time(0));
+    
+    int matrizA[filas][columnas], matrizB[filas][columnas], resultado[filas][columnas];
+
+    printf("Matriz A:\n");
+    generarMatrizAleatoria(filas, columnas, matrizA);
+    imprimirMatriz(filas, columnas, matrizA);
+
+    printf("\nMatriz B:\n");
+    generarMatrizAleatoria(filas, columnas, matrizB);
+    imprimirMatriz(filas, columnas, matrizB);
+
+    printf("\nLa suma de las matrices es:\n");
+    sumarMatrices(filas, columnas, matrizA, matrizB, resultado);
+    imprimirMatriz(filas, columnas, resultado);
+
+    return 0;
+}
